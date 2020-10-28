@@ -107,6 +107,8 @@ def formulas():
 
     
 def indice(listaNivel,listaIndice,baseo,listaAño):
+    archivoA=open("./archivos/datos.txt" , 'a')
+    archivoA.write("RESPUESTAS DE LAS VARIABLES MACROECONOMICAS :)" +"\n" )
     contador=0
     separador=("*"*40)
     for precio in listaNivel:
@@ -117,12 +119,16 @@ def indice(listaNivel,listaIndice,baseo,listaAño):
     for numero in listaIndice:
         print("INDICE DE PRECIOS : ")
         print(f"El indice de Precios del año {listaAño[contador]} es = {numero}")
+        textoa=str(numero)
+        archivoA.write("Indice de Precios = " + textoa +  "\n" )
         contador=contador+1
         print(separador)
         print("")
+    archivoA.close()
 
 
 def inflacion(listaIndice,listaAño,cuantos,listaInflacion):
+    archivoA=open("./archivos/datos.txt" , 'a')
     contador=1
     contador2=0
     contadorA=1
@@ -138,12 +144,16 @@ def inflacion(listaIndice,listaAño,cuantos,listaInflacion):
     for numero in listaInflacion:
         print("INFLACION : ")
         print(f"La Inflacion del año {listaAño[contadorA]} es = {numero}")
+        textoa=str(numero)
+        archivoA.write("Inflacion = " + textoa +  "\n" )
         contadorA=contadorA+1
         print(separador)
         print("")
+    archivoA.close()
 
 
 def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño,cuantos):
+    archivoA=open("./archivos/datos.txt" , 'a')
     contador=0
     contadorA=0
     separador=("*"*40)
@@ -155,6 +165,10 @@ def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño,cuantos):
     for numero in listaPIBR:
         print("Producto Interno Bruto Real : ")
         print(f"El Producto Interno Bruto Real del año {listaAño[contadorA]} es = {numero}")
+        textoa=str(numero)
+        archivoA.write("Producto Interno Bruto Real = " + textoa +  "\n" )
         contadorA=contadorA+1
         print(separador)
         print("")
+    archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+    archivoA.close()
