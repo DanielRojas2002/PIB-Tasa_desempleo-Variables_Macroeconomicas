@@ -132,3 +132,8 @@ try:
             print("1=SI\2=NO")
             opcion=int(input("Deseas regresar al Menu Principal : "))
             print("")
+        
+        elif menu <=0 or menu>4:
+            print("Ingresaste el numero de opcion mal , porfavor intentelo de nuevo :)")
+            print(separador)
+            print("")
