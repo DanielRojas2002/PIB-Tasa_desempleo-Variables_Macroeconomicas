@@ -40,6 +40,10 @@ class MetodoDelIngreso():
         print("¿¿¿RESPUESTAS???:")
         print(f"Ingreso Nacional(IN) = {IN}  ")
         print(f"Producto Interno Bruto(PIB) = {pib} ")
+        archivoA=open("./archivos/datos.txt" , 'a')
+        archivoA.write("Ingreso Nacional(IN) = " + textoa +  "\n" )
+        archivoA.write("Producto Interno Bruto(PIB) =" + textob + "\n" )
+        archivoA.close()
         print("")
 
 #-------------------------------------------------------------------------------------------------------------------------------------
