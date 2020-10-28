@@ -1,0 +1,30 @@
+1.	Con la información de las cuentas nacionales del país WW, presentada en la tabla de abajo, 
+obtenga, utilizando el método del gasto, el Producto Interno Bruto, el Producto Interno Neto y el Ingreso Nacional. 
+
+*Impuestos indirectos 	830
+*Impuestos directos 	225
+*Pagos al IMSS	180
+*Ingreso neto de los factores extranjeros	545
+*Exportaciones	845
+*Depreciación	1451
+*Compra de maquinaria y equipo par parte de las empresas	12,695
+*Importaciones	405
+*Gastos de Gobierno	12,804
+*Gasto en consumo de las familias	11,677
+
+FORMULA, DESARROLLO : 
+Xn=(E-I)
+PIB=(C+I+G+Xn)
+
+Xn=(845-405)
+Xn=440
+PIB=(11,677+545+12,804+440)
+PIB=25,466
+
+PIN=(PIB-Dep)
+PIN=(25,466-1451)
+PIN=(24,015)
+
+IN=(PIN-ingreso neto de los factores-impuestos indirectos)
+IN=(24,015-545-830)
+IN=(22,640)

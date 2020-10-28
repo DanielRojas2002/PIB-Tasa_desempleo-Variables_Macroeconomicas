@@ -1,0 +1,4 @@
+
+DESEMPLEO:
+
+TASA DE DESEMPLEO = Desempleados o Poblacion no Ocupada / Fuerza Laboral o PEA * 100

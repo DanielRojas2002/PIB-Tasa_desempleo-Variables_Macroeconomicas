@@ -1,0 +1,24 @@
+Con la información de las cuentas nacionales del país X, 
+presentada en la tabla de abajo, obtenga, utilizando el método del Ingreso, el Producto Interno Bruto.
+
+*Impuestos indirectos 	1234
+*Ingresos de los propietarios	1225
+*IMSS	1500
+*Transferencias de gobierno	 1678
+*Intereses	1320
+*Depreciación	1325
+*Beneficios Corporativos	1987
+*Rentas	 1175
+*Remuneraciones de los trabajadores	 12,890
+*Ingreso Neto de los Fac. Extranjeros	1916
+
+FORMULA,DESARROLLO :
+IN=Rt+R+In+Ip+Bc
+PIB=(IN+IIE+dep+INFE)
+
+IN=(12,890+1,175+1,320+1225+1,987)
+IN=18,597
+
+PIB=(18,597+1,234+1,325+1,916)
+PIB=(23,072)
+

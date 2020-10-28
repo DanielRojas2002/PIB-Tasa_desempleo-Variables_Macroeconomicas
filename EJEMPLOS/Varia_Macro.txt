@@ -1,0 +1,19 @@
+Con la información de las siguientes variables macroeconómicas de un país. Completa las columnas en blanco.
+
+Año	   Nivel de precios	    Producto Interno Bruto Nominal
+1990	   231.00	                   111,550
+1991	   243.20	                   124,762
+1992	   270. 80	                   199,821
+
+Formulas:
+
+Indice de Precios : NIVEL DE PRECIOS / BASE DE NIVEL DE PRECIOS * 100
+
+Inflacion:
+El primero no se puede sacar siempre
+INDICE DE PRECIOS – INDICE DE PRECIOS UNO ATRÁS / INDICE DE PRECIOS UNO ATRÁS * 100
+
+PIBR: PRODUCTO INTERNO BRUTO NOMINAL / INDICE DE PRECIOS * 100
+
+
+
