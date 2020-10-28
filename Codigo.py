@@ -139,3 +139,13 @@ try:
             print("Ingresaste el numero de opcion mal , porfavor intentelo de nuevo :)")
             print(separador)
             print("")
+
+except:
+    print("*"*30)
+    print(f"Ocurrió un problema {sys.exc_info()[1]}")
+    print("Intenta respetar lo que se te pide :) ")
+    print("*"*30)
+    
+finally:
+    print("FIN DEL CODIGO ...")
+    print("*"*30)
