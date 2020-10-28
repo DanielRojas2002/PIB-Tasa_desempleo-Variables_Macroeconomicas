@@ -121,3 +121,14 @@ try:
             print("1=SI\2=NO")
             opcion=int(input("Deseas regresar al Menu Principal : "))
             print("")
+        
+        elif menu==4:
+            desempleo=int(input("Ingresa los Desempleados o la poblacion no ocupada : "))
+            PEA=int(input("Ingresa La Fueza Laboral o PEA : "))
+            objeto=desempleos(desempleo,PEA)
+            objeto.calculo()
+            print(separador)
+            print("")
+            print("1=SI\2=NO")
+            opcion=int(input("Deseas regresar al Menu Principal : "))
+            print("")
