@@ -58,3 +58,66 @@ try:
             print("1=SI\2=NO")
             opcion=int(input("Deseas regresar al Menu Principal : "))
             print("")
+        
+        elif menu==3:
+            listaAño=[]
+            contador1=1
+            listaNivel=[]
+            listaPIBN=[]
+            listaIndice=[]
+            listaInflacion=[]
+            listaPIBR=[]
+            contador=0
+            contadoor=0
+            cuantos=int(input("Cuantos Años vas a registrar : "))
+            print(separador)
+            for año in range(cuantos):
+                año=int(input("Ingresa el Año : "))
+                listaAño.append(año)
+                
+            print(separador)
+            for año in listaAño:
+                print(f"{contador1}-{año}")
+                contador1=contador1+1
+            base=int(input("Cual es el indice del año base : "))
+            baseo=(base-1)
+            print(separador)
+            
+                
+            for precio in range(cuantos):
+                nivel_precios=float(input(f"Ingresa el Nivel de Precios del Año {listaAño[contador]} :"))
+                listaNivel.append(nivel_precios)
+                contador=contador+1
+            print(separador)
+                
+            for producto in range(cuantos):
+                PIBN=float(input(f"Ingrese el Producto Interno Bruto Nominal del Año {listaAño[contadoor]} : "))
+                listaPIBN.append(PIBN)
+                contadoor=contadoor+1
+            print(separador)
+            
+            print("")
+            print(separador)
+            print("Estas son las Formulas :) ")
+            formulas()
+            print(separador)
+            print("")
+            
+            print(separador)
+            indice(listaNivel,listaIndice,baseo,listaAño)
+            print(separador)
+            print("")
+            
+            print(separador)
+            inflacion(listaIndice,listaAño)
+            print("")
+            
+            print(separador)
+            PIBR(listaPIBN,listaIndice,listaPIBR,listaAño)
+            print("")
+            
+            print(separador)
+            print("")
+            print("1=SI\2=NO")
+            opcion=int(input("Deseas regresar al Menu Principal : "))
+            print("")
