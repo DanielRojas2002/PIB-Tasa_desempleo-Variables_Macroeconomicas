@@ -83,11 +83,16 @@ class MetodoDelIngreso:
     def PIB(self):
         IN=(self.__RT+self.__R+self.__IN+self.__IP+self.__BC)
         pib=(IN+self.__II+self.__D+self.__INFE)
-        
+        textoa=str(IN)
+        textob=str(pib)
         print("")
         print("¿¿¿RESPUESTAS???:")
         print(f"Ingreso Nacional(IN) = {IN}  ")
         print(f"Producto Interno Bruto(PIB) = {pib} ")
+        archivoA.writte("RESPUESTAS METODO DEL INGRESO : ")
+        archivoA.write("Ingreso Nacional(IN) = " + textoa + "\n" )
+        archivoA.write("Producto Interno Bruto(PIB) =" + textob  + "\n" )
+        archivoA.close()
         print("")
         
         

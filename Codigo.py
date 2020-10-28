@@ -17,6 +17,7 @@ try:
         print("-"*30)
         menu=int(input("Ingrese el numero de opcion que desea ejecutar : "))
         print("-"*30)
+        archivoA=open("./archivos/datos.txt" , 'a')
 
         if menu==1:
             print("")
