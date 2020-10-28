@@ -1,9 +1,11 @@
 import sys 
-
-
-
-
-
+from clases import desempleos
+from clases import formulas
+from clases import indice
+from clases import inflacion
+from clases import PIBR
+from clases import MetodoDelIngreso
+from clases import MetodoDelGasto
 
 try:
     opcion=1
