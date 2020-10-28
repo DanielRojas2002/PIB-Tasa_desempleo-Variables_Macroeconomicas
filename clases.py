@@ -9,6 +9,76 @@ class desempleos:
         print(f"La tasa de Desempleo es : {resultado}")
 
 
+#--------------------------------------------------------------------------------------------------------------------------------------
+# METODO DEL INGRESO
+
+class MetodoDelIngreso:
+    def __init__ (self,II,IP,IN,D,BC,R,RT,INFE):
+        self.__II=impuesto_indirectos1
+        self.__IP=ingreso_propietario
+        self.__IN=intereses
+        self.__D=depreciacion
+        self.__BC=beneficios_corporativos
+        self.__R=renta
+        self.__RT=renumeracion
+        self.__INFE=ingreso_neto
+        print("aqui pase")
+        
+          
+    def formulas(self):
+        print("-"*40)
+        print("IN=(Rt+R+In+Ip+Bc)")
+        print("PIB=(IN+IIE+dep+INFE)")
+        print("-"*40)
+
+    
+    def PIB(self):
+        IN=(self.__RT+self.__R+self.__IN+self.__IP+self.__BC)
+        pib=(IN+self.__II+self.__D+self.__INFE)
+        textoa=str(IN)
+        textob=str(pib)
+        print("")
+        print("¿¿¿RESPUESTAS???:")
+        print(f"Ingreso Nacional(IN) = {IN}  ")
+        print(f"Producto Interno Bruto(PIB) = {pib} ")
+        print("")
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+#METODO DEL GASTO
+
+class MetodoDelGasto:
+    def __init__(self,ID,INFE,E,D,IM,GG,GCF):
+        self.__IN=impuesto_indirectos
+        self.__INFE=ingreso_neto
+        self.__E=exportaciones
+        self.__D=depreciacion
+        self.__IM=importaciones
+        self.__GG=gasto_gobierno
+        self.__GCF=consumo_familia
+        
+    
+    def PIB(self):
+        XN=(self.__E-self.__IM)
+        pib=(self.__GCF+self.__INFE+self.__GG+XN)
+        PIN=(pib-self.__D)
+        IN=(PIN-self.__INFE-self.__IN)
+        print("")
+        print("¿¿¿RESPUESTAS???:")
+        print(f"Producto Interno Bruto(PIB) = {pib} ")
+        print(f"Producto Interno Neto(PIN) = {PIN}  ")
+        print(f"Ingreso Nacional(IN) = {IN}  ")
+        print("")
+        
+    
+    def formulas(self):
+        print("-"*40)
+        print("Estas son las Formulas ")
+        print("Xn=(E-I)")
+        print("PIB=(C+I+G+Xn)")
+        print("IN=(PIN-ingreso neto de los factores-impuestos indirectos)")
+        print("-"*40)
+
+
 #VARIABLES MACROECONOMICAS
 def formulas():
     print("*Indice de Precios : "+ "=" +"(NIVEL DE PRECIOS / BASE DE NIVEL DE PRECIOS * 100")
@@ -68,69 +138,3 @@ def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño,cuantos):
         contadorA=contadorA+1
         print(separador)
         print("")
-
-#--------------------------------------------------------------------------------------------------------------------------------------
-# METODO DEL INGRESO
-class MetodoDelIngreso:
-    def __init__ (self,II,IP,IN,D,BC,R,RT,INFE):
-        self.__II=impuestoindirectos
-        self.__IP=ingreso_propietario
-        self.__IN=intereses
-        self.__D=depreciacion
-        self.__BC=beneficios_corporativos
-        self.__R=renta
-        self.__RT=renumeracion
-        self.__INFE=ingreso_neto
-        
-          
-    def formulas(self):
-        print("-"*40)
-        print("IN=(Rt+R+In+Ip+Bc)")
-        print("PIB=(IN+IIE+dep+INFE)")
-        print("-"*40)
-
-    
-    def PIB(self):
-        IN=(self.__RT+self.__R+self.__IN+self.__IP+self.__BC)
-        pib=(IN+self.__II+self.__D+self.__INFE)
-        textoa=str(IN)
-        textob=str(pib)
-        print("")
-        print("¿¿¿RESPUESTAS???:")
-        print(f"Ingreso Nacional(IN) = {IN}  ")
-        print(f"Producto Interno Bruto(PIB) = {pib} ")
-        print("")
-
-#-------------------------------------------------------------------------------------------------------------------------------------
-#METODO DEL GASTO
-class MetodoDelGasto:
-    def __init__(self,ID,INFE,E,D,IM,GG,GCF):
-        self.__IN=impuesto_indirectos
-        self.__INFE=ingreso_neto
-        self.__E=exportaciones
-        self.__D=depreciacion
-        self.__IM=importaciones
-        self.__GG=gasto_gobierno
-        self.__GCF=consumo_familia
-        
-    
-    def PIB(self):
-        XN=(self.__E-self.__IM)
-        pib=(self.__GCF+self.__INFE+self.__GG+XN)
-        PIN=(pib-self.__D)
-        IN=(PIN-self.__INFE-self.__IN)
-        print("")
-        print("¿¿¿RESPUESTAS???:")
-        print(f"Producto Interno Bruto(PIB) = {pib} ")
-        print(f"Producto Interno Neto(PIN) = {PIN}  ")
-        print(f"Ingreso Nacional(IN) = {IN}  ")
-        print("")
-        
-    
-    def formulas(self):
-        print("-"*40)
-        print("Estas son las Formulas ")
-        print("Xn=(E-I)")
-        print("PIB=(C+I+G+Xn)")
-        print("IN=(PIN-ingreso neto de los factores-impuestos indirectos)")
-        print("-"*40)
