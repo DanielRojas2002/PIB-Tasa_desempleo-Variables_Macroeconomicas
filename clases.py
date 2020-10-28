@@ -22,7 +22,6 @@ class MetodoDelIngreso():
         self.__R=R
         self.__RT=RT
         self.__INFE=INFE
-        print("aqui pase")
         
           
     def formulas(self):
