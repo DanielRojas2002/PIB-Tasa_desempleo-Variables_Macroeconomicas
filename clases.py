@@ -18,6 +18,7 @@ def formulas():
     
 def indice(listaNivel,listaIndice,baseo,listaAño):
     contador=0
+    separador=("*"*40)
     for precio in listaNivel:
         z=(precio/(listaNivel[baseo]))*100
         listaIndice.append(z)
@@ -31,10 +32,11 @@ def indice(listaNivel,listaIndice,baseo,listaAño):
         print("")
 
 
-def inflacion(listaIndice,listaAño):
+def inflacion(listaIndice,listaAño,cuantos,listaInflacion):
     contador=1
     contador2=0
     contadorA=1
+    separador=("*"*40)
     
     for numero in range(cuantos-1):
         resultado=(listaIndice[contador]-listaIndice[contador2])/listaIndice[contador2]*100
@@ -51,9 +53,10 @@ def inflacion(listaIndice,listaAño):
         print("")
 
 
-def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño):
+def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño,cuantos):
     contador=0
     contadorA=0
+    separador=("*"*40)
     for numero in range(cuantos):
         resultado=(listaPIBN[contador]/listaIndice[contador])*100
         listaPIBR.append(resultado)
@@ -70,7 +73,7 @@ def PIBR(listaPIBN,listaIndice,listaPIBR,listaAño):
 # METODO DEL INGRESO
 class MetodoDelIngreso:
     def __init__ (self,II,IP,IN,D,BC,R,RT,INFE):
-        self.__II=impuestos_indirectos
+        self.__II=impuestoindirectos
         self.__IP=ingreso_propietario
         self.__IN=intereses
         self.__D=depreciacion
@@ -79,7 +82,14 @@ class MetodoDelIngreso:
         self.__RT=renumeracion
         self.__INFE=ingreso_neto
         
-        
+          
+    def formulas(self):
+        print("-"*40)
+        print("IN=(Rt+R+In+Ip+Bc)")
+        print("PIB=(IN+IIE+dep+INFE)")
+        print("-"*40)
+
+    
     def PIB(self):
         IN=(self.__RT+self.__R+self.__IN+self.__IP+self.__BC)
         pib=(IN+self.__II+self.__D+self.__INFE)
@@ -89,18 +99,7 @@ class MetodoDelIngreso:
         print("¿¿¿RESPUESTAS???:")
         print(f"Ingreso Nacional(IN) = {IN}  ")
         print(f"Producto Interno Bruto(PIB) = {pib} ")
-        archivoA.writte("RESPUESTAS METODO DEL INGRESO : ")
-        archivoA.write("Ingreso Nacional(IN) = " + textoa + "\n" )
-        archivoA.write("Producto Interno Bruto(PIB) =" + textob  + "\n" )
-        archivoA.close()
         print("")
-        
-        
-    def formulas(self):
-        print("-"*40)
-        print("IN=(Rt+R+In+Ip+Bc)")
-        print("PIB=(IN+IIE+dep+INFE)")
-        print("-"*40)
 
 #-------------------------------------------------------------------------------------------------------------------------------------
 #METODO DEL GASTO

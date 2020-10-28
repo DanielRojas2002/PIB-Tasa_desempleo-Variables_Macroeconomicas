@@ -17,14 +17,13 @@ try:
         print("-"*30)
         menu=int(input("Ingrese el numero de opcion que desea ejecutar : "))
         print("-"*30)
-        archivoA=open("./archivos/datos.txt" , 'a')
 
         if menu==1:
             print("")
             print("*"*30 +"BIENVENIDO AL PROGRAMA" + "*"*30)
             print("Este programa te saca el PIB con el metodo del ingreso :)")
             print("-"*30)
-            impuestos_indirectos=float(input("Dime los Impuestos Indirectos : "))
+            impuestoindirectos=(float(input("Dime los Impuestos Indirectos : ")))
             ingreso_propietario=float(input("Dime los Ingresos de los Propietarios : "))
             intereses=float(input("Dime los Intereses : "))
             depreciacion=float(input("Dime la Depreciacion : "))
@@ -32,7 +31,7 @@ try:
             renta=float(input("Dime la Renta : "))
             renumeracion=float(input("Dime la Remuneraciones de los trabajadores : "))
             ingreso_neto=float(input("Dime el Ingreso Neto de los Factores Extranjeros : "))
-            objeto=MetodoDelIngreso(impuestos_indirectos,ingreso_propietario,intereses,depreciacion,beneficios_corporativos,renta,renumeracion,ingreso_neto)
+            objeto=MetodoDelIngreso(impuestoindirectos,ingreso_propietario,intereses,depreciacion,beneficios_corporativos,renta,renumeracion,ingreso_neto)
             objeto.formulas()
             objeto.PIB()
             print(separador)
@@ -112,11 +111,11 @@ try:
             print("")
             
             print(separador)
-            inflacion(listaIndice,listaAño)
+            inflacion(listaIndice,listaAño,cuantos,listaInflacion)
             print("")
             
             print(separador)
-            PIBR(listaPIBN,listaIndice,listaPIBR,listaAño)
+            PIBR(listaPIBN,listaIndice,listaPIBR,listaAño,cuantos)
             print("")
             
             print(separador)
@@ -144,6 +143,7 @@ try:
 except:
     print("*"*30)
     print(f"Ocurrió un problema {sys.exc_info()[1]}")
+    print(f"Ocurrió un problema {sys.exc_info()[0]}")
     print("Intenta respetar lo que se te pide :) ")
     print("*"*30)
     
