@@ -45,6 +45,7 @@ class MetodoDelIngreso():
         archivoA.write("Ingreso Nacional(IN) = " + textoa +  "\n" )
         archivoA.write("Producto Interno Bruto(PIB) =" + textob + "\n" )
         archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+        archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
         archivoA.close()
         print("")
 
@@ -76,11 +77,23 @@ class MetodoDelGasto():
         pib=(self.__GCF+self.__INFEE+self.__GG+XN)
         PIN=(pib-self.__D)
         IN=(PIN-self.__INFEE-self.__ID)
+        textoa=str(pib)
+        textob=str(PIN)
+        textoc=str(IN)
         print("¿¿¿RESPUESTAS???:")
         print(f"Producto Interno Bruto(PIB) = {pib} ")
         print(f"Producto Interno Neto(PIN) = {PIN}  ")
         print(f"Ingreso Nacional(IN) = {IN}  ")
         print("")
+
+        archivoA=open("./archivos/datos.txt" , 'a')
+        archivoA.write("RESPUESTAS DEL METODO DEL GASTO :)" +"\n" )
+        archivoA.write("Producto Interno Bruto(PIB) =" + textoa +  "\n" )
+        archivoA.write("Producto Interno Neto(PIN) = " + textob +  "\n" )
+        archivoA.write("Ingreso Nacional(IN) =" + textoc +  "\n" )
+        archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+        archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+        archivoA.close()
         
     
     
