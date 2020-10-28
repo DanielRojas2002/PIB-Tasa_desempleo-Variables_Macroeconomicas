@@ -5,8 +5,15 @@ class desempleos:
     
     
     def calculo(self):
+        archivoA=open("./archivos/datos.txt" , 'a')
         resultado=(self.__desempleados/self.__PEA)*100
+        textoa=str(resultado)
         print(f"La tasa de Desempleo es : {resultado}")
+        archivoA.write("RESPUESTA DE LA TASA DE DESEMPLEO :)" +"\n" )
+        archivoA.write("TASA DE DESEMPLEO = " + textoa +  "\n" )
+        archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+        archivoA.write("///////////////////////////////////////////////////////////////" +"\n" )
+        archivoA.close()
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------
